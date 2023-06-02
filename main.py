@@ -5,7 +5,7 @@ import sys
 import detect
 import funcs
 
-sys.setrecursionlimit(10 ** 7)
+sys.setrecursionlimit(10 ** 7) # 최대 재귀 호출 수 조절
 
 code = """
 def func(arr):
@@ -33,6 +33,8 @@ print(modified_code)
 print('--------------')
 
 exec(modified_code)
+
+# 도출된 값을 바탕으로 샘플링 후 그래프 형태로 나타내기
 
 x = []
 y = []
