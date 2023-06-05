@@ -60,7 +60,7 @@ def analysis_code():
 window = tk.Tk()
 window.title("시간 복잡도 분석")
 
-# Code Input Frame
+# 코드 입력란 프레임
 code_frame = ttk.Frame(window)
 code_frame.pack(padx=20, pady=10, fill=tk.BOTH, expand=True)
 
@@ -70,7 +70,7 @@ code_label.pack(anchor=tk.W)
 code_text = tk.Text(code_frame, height=30)
 code_text.pack(fill=tk.BOTH, expand=True)
 
-# Arguments Frame
+# 인수 설정 프레임
 arguments_frame = ttk.Frame(window)
 arguments_frame.pack(padx=20, pady=10)
 
@@ -117,7 +117,7 @@ def switch_arguments():
         test_count_entry.grid()
 
 
-# Switch Label
+# 인수 유형 스위치
 switch_label = ttk.Label(arguments_frame, text="인수 유형:")
 switch_label.grid(row=0, column=0, sticky=tk.W)
 
@@ -128,7 +128,7 @@ number_button.grid(row=0, column=1, sticky=tk.W)
 array_button = ttk.Radiobutton(arguments_frame, text="배열", variable=argument_type, value="배열", command=switch_arguments)
 array_button.grid(row=0, column=2, sticky=tk.W)
 
-# Number Arguments Settings
+# 숫자 인수 세팅
 value_label = ttk.Label(arguments_frame, text="숫자 인수 설정:")
 value_label.grid(row=1, column=0, sticky=tk.W)
 
@@ -156,7 +156,7 @@ value_step_entry = ttk.Entry(arguments_frame, validate="key",
 value_step_entry.grid(row=4, column=1, sticky=tk.W)
 value_step_entry.insert(0, "1")
 
-# Array Arguments Settings
+# 배열 인수 세팅
 size_label = ttk.Label(arguments_frame, text="배열 크기 설정:")
 size_label.grid(row=1, column=0, sticky=tk.W, pady=(10, 0))
 size_label.grid_remove()
@@ -201,11 +201,11 @@ test_count_entry.grid(row=8, column=1, sticky=tk.W)
 test_count_entry.insert(0, "10")
 test_count_entry.grid_remove()
 
-# Execute Button
+# 실행 버튼
 execute_button = ttk.Button(window, text="실행", command=analysis_code)
 execute_button.pack(pady=10)
 
-# Error Message
+# 에러 메시지
 error_message = tk.StringVar()
 error_label = ttk.Label(window, textvariable=error_message, foreground="red")
 error_label.pack()

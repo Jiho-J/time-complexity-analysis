@@ -15,6 +15,7 @@ def change_node_type(node, new_type):
     return new_node
 
 
+# 코드 변수 삽입
 def modify_code(code: str):
     setting_code = ast.Assign(
         targets=[ast.Name(id='operate_count', ctx=ast.Store())],
