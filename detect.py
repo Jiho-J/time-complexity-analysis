@@ -29,6 +29,7 @@ def nLogn(x, a, b):
 
 def detect_trend(x, y):
     plt.clf()
+    plt.figure("추이 분석")
     models = {
         'constant': constant,
         'linear': linear,
@@ -48,7 +49,6 @@ def detect_trend(x, y):
             residuals = y - model_func(x, *params)
             ss_residuals = np.sum(residuals ** 2)
             ss_total = np.sum((y - np.mean(y)) ** 2)
-            print(ss_residuals, ss_total)
             r_squared = 1 - (ss_residuals / ss_total)
             plt.plot(x, models[model_name](x, *params), color='gray')
             print(model_name, ':', r_squared)
